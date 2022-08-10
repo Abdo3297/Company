@@ -1,0 +1,223 @@
+@charset "UTF-8";
+body {
+  font-family: cursive;
+  position: relative;
+}
+
+form textarea:focus:-ms-input-placeholder,
+form input:not([type=submit]):focus:-ms-input-placeholder {
+  opacity: 0;
+  -ms-transition: 0.5s;
+  transition: 0.5s;
+}
+
+form textarea:focus::-moz-placeholder, form input:not([type=submit]):focus::-moz-placeholder {
+  opacity: 0;
+  -moz-transition: 0.5s;
+  transition: 0.5s;
+}
+
+form textarea:focus:-ms-input-placeholder, form input:not([type=submit]):focus:-ms-input-placeholder {
+  opacity: 0;
+  -ms-transition: 0.5s;
+  transition: 0.5s;
+}
+
+form textarea:focus::placeholder,
+form input:not([type=submit]):focus::placeholder {
+  opacity: 0;
+  transition: 0.5s;
+}
+
+section {
+  overflow-x: hidden;
+}
+
+.bg-section {
+  background-color: #f6f9fe;
+}
+.bg-section .title-before {
+  background-color: #e7f1fd;
+}
+
+.icon-container {
+  width: 70px;
+  height: 70px;
+}
+
+.progress-bar {
+  transition: 0.5s;
+}
+
+.progress-div span::after {
+  content: " ";
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
+}
+
+/*navbar*/
+.navbar-light .navbar-nav .nav-link {
+  position: relative;
+  transition: 0.3s;
+}
+.navbar-light .navbar-nav .nav-link::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  background-color: #6B04A2;
+  transition: inherit;
+}
+.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link:hover {
+  color: #6B04A2;
+}
+.navbar-light .navbar-nav .nav-link.active::before, .navbar-light .navbar-nav .nav-link:hover::before {
+  width: 100%;
+}
+.navbar-light .navbar-toggler:focus {
+  box-shadow: none;
+}
+
+/*header*/
+#header {
+  height: 75vh;
+  background: url("../img/hero-bg.jpg") center center/cover;
+  position: relative;
+}
+#header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+#header h3,
+#header h6 {
+  text-transform: capitalize;
+}
+
+/*modal*/
+#exampleModal object {
+  height: 80vh;
+}
+#exampleModal.fade .modal-dialog {
+  transition: transform 0.5s ease-out;
+  transform: scale(0);
+}
+#exampleModal.show .modal-dialog {
+  transform: none;
+}
+
+/*icon box*/
+.icon-box .card-overlay {
+  inset: 0;
+}
+.icon-box > * {
+  position: relative;
+  transition: 0.5s;
+}
+.icon-box:hover .card-overlay {
+  top: 0 !important;
+}
+.icon-box:hover > * {
+  color: #fff !important;
+}
+
+/*slider*/
+.slider-div {
+  background: url("../img/testimonials-bg.jpg") center center/cover;
+}
+.slider-div::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.slider-div #carouselExampleCaptions {
+  height: 350px;
+}
+.slider-div .carousel-item img {
+  width: 150px;
+  height: 150px;
+}
+
+/*filter*/
+.filterd-items > a {
+  height: 350px;
+}
+.filterd-items > a.hidden {
+  display: none;
+}
+.filterd-items > a.active {
+  display: block;
+  -webkit-animation: 0.7s shown ease-in-out;
+          animation: 0.7s shown ease-in-out;
+}
+.filterd-items > a img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+@-webkit-keyframes shown {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes shown {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/**** Contact ****/
+#Contact i {
+  height: 50px;
+  width: 50px;
+  border: 1px dashed;
+  line-height: 50px;
+}
+
+/* footer-list */
+.footer-list li {
+  position: relative;
+}
+.footer-list li::before {
+  content: "";
+  position: absolute;
+  border: 5px solid transparent;
+  border-left-color: #6B04A2;
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/*scroll to top*/
+.up {
+  position: fixed;
+  bottom: 30px;
+  right: -50px;
+  background-color: #6B04A2;
+  color: #fff;
+  font-size: 20px;
+  padding: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 1.6;
+  transition: 0.2s;
+  z-index: 10000;
+}
+.up.show {
+  right: 30px;
+}/*# sourceMappingURL=main.css.map */
