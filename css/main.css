@@ -220,4 +220,10 @@ section {
 }
 .up.show {
   right: 30px;
-}/*# sourceMappingURL=main.css.map */
+}
+@media(max-width:767px) {
+  footer {
+    text-align:center;
+  }
+}
+/*# sourceMappingURL=main.css.map */
